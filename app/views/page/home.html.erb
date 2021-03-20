@@ -1,0 +1,302 @@
+<div class='container'>
+    <h4 class='title'> Making the review HTML and CSS with Bootstrap</h4>
+    <! ------------------------------------------------------------>
+    <! MENUS NAVBAR >
+    <! ------------------------------------------------------------>
+    <nav class='navbar navbar-dark bg-primary'>
+        <div class="container-fluid">
+            <a href='#texts' class="navbar-nav">TEXT ATTRIB</a>
+            <a href='#table' class="navbar-nav">TABLE</a>
+            <a href='#form-login' class="navbar-nav">FORM-LOGIN</a>
+            <a href='#form-full' class="navbar-nav">FORM-FULL</a>
+            <a href='#form-floating' class="navbar-nav">FORM-FLOATING</a>
+            <a href='#filter' class="navbar-nav">FILTER</a>
+            <a href='#alerts' class="navbar-nav">ALERTS</a>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    <! ------------------------------------------------------------>
+    <! IMAGE FLUID AND SIGN IN >
+    <! ------------------------------------------------------------>
+    <div class='row'>
+        <div class='col-sm-6'>
+            <%= image_tag("image1.jpg", class:'img-fluid mt-2 mb-2', alt: "..") %>
+         </div>
+        <div class='col-sm-6'>
+            <p class='sub-title'>Sign in</p>
+            <form>
+                <label for='login' class='form-label'>Username: </label>
+                <input type='text' class='control-form' placeholer='fzerpap@gmail.com'>
+                <label for='password' class='form-label'>Password: </label>
+                <input type='password' class='control-form' >
+                <button type='submit' class='btn btn-primary'>Sign in</button>
+            </form
+        </div>
+    </div>
+    <! ------------------------------------------------------------>
+    <! FOR TEXT: COLORS, BACKGROUND AND POSITION >
+    <! ------------------------------------------------------------>
+    <div class='row '>
+        <div class='col-sm-4'>
+            <p class='sub-title'>Colors Text</p>
+            <p class='text-primary'>Primary Text</p>
+            <p class='text-secondary'>Secondary Text </p>
+            <p class='text-success'>Sucess Text</p>
+            <p class='text-info'>Info Text</p>
+            <p class='text-warning'>Warning Text</p>
+            <p class='text-danger'>Danger Text</p>
+        </div>
+        <div class='col-sm-4'>
+            <p class='sub-title'>Background Colors Text</p>
+            <p class='bg-primary'>Primary Text</p>
+            <p class='bg-secondary'>Secondary Text </p>
+            <p class='bg-success'>Sucess Text</p>
+            <p class='bg-info'>Info Text</p>
+            <p class='bg-warning'>Warning Text</p>
+            <p class='bg-danger'>Danger Text</p>
+        </div>
+        <div class='col-sm-4'>
+            <p class='sub-title'>Text Position</p>
+            <p class='text-center'>Text center</p>
+            <p class='text-right'>Textright</p>
+            <p class='text-left'>Text left</h5>
+        </div>
+    </div>
+    <! ------------------------------------------------------------>
+    <! TABLES WITH TABLE-WARNING, SUCESS, DANGER, ETC >
+    <! ------------------------------------------------------------>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <p class='sub-title' id='table'>Table</p>
+            <table class='table'>
+                <thead>
+                    <tr>
+                        <th class='text-center'>Column1</th>
+                        <th class='text-center'>Column2</th>
+                        <th class='text-center'>Column3</th>
+                        <th class='text-center'>Actions</th>
+                    </tr>
+                </thead>
+                <body>
+                    <tr class='table-info'>
+                        <td>Value 1</td>
+                        <td>Value 2</td>
+                        <td>Value 2</td>
+                        <td>
+                            <a href='#'>
+                                <i class="fas fa-users-slash", style='color: red; font-size: 1.5rem;'></i>
+                                Users
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class='table-success'>
+                        <td>Value 1</td>
+                        <td>Value 2</td>
+                        <td>Value 3</td>
+                        <td>
+                            <a href='#'>
+                                <i class="fas fa-check", style='color: green; font-size: 1.5rem;'></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr class='table-warning'>
+                        <td>Value 1</td>
+                        <td>Value 2</td>
+                        <td>Value 3</td>
+                        <td>
+                            <a href='#'>
+                                <i class="fas fa-bomb", style='color: yelow; font-size: 1.5rem;'></i>
+                            </a>
+                        </td>
+                    </tr>        
+                    <tr class='table-danger text-decoration-line-through'>
+                        <td>Value 1</td>
+                        <td>Value 2</td>
+                        <td>Value 3</td>
+                        <td>
+                            <a href='#'>
+                                <i class="fas fa-exclamation-triangle", style='color: red; font-size: 1.5rem;'></i>
+                            </a>
+                        </td>
+
+                        </tr>        
+                </body>
+            </table>
+        </div>
+    </div>
+    <! ------------------------------------------------------------>
+    <! FIGURE  >
+    <! ------------------------------------------------------------>    
+    <div class='row'>
+        <div class='col-sm-6'>
+           <p class='sub-title'>Figure with text</p>
+           <figure class='figure'>
+               <%= image_tag("image1.jpg", class: 'figure-img img-fluid rounded', alt: "..") %>
+               <figcaption class='figure-caption'>A caption for the above image.</figcaption>
+           </figure>
+        </div>
+        <div class='col-sm-6'>
+            <p class='sub-title'>buttons with icons</p>
+            <button class="btn"><i class="fa fa-home"></i>Home</button>
+            <button class="btn"><i class="fa fa-arrow-alt-circle-left"></i> Back</button>
+            <button class="btn"><i class="fa fa-download"></i> Download</button>
+        </div>
+    </div>
+    <! ------------------------------------------------------------>
+    <! FORM FOR SOME INPUTS >
+    <! ------------------------------------------------------------>    
+    <div class='row'>
+        <div class='col-sm-6'>
+            <p class='sub-title'>Form with all type inputs</p>
+            <form>
+                <label for='name' class='form-label'>Full Name: </label>
+                <input type='text' class='control-form' >
+                <label for='data' class='form-label'>Birthday: </label>
+                <input type='date' class='control-form' >
+                <label for='children' class='form-label'>Childrens: </label>
+                <input type='text' class='control-form' >
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input"   checked>
+                    <label for="flexCheckChecked" class="form-check-label" >Casado </label>
+                </div>
+                <label for="formFile" class="form-label">File input </label>
+                <input type="file" class="form-control"  id="formFile">
+                <button type='submit' class='bnt bnt-primary'>Salvar</button>
+            </form>
+        </div>
+        <! ------------------------------------------------------------>
+        <! FORM WITH FLOATING LABELS
+        <! ------------------------------------------------------------>
+        <div class='col-sm-6'>
+            <p class='sub-title' id='form-floating'>Form Floating label</p>
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="Francisco Zerpa">
+                <label for="floatingInput">Full Name</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" class="form-control" placeholder="Address">
+                <label for="floatingAddress">Address</label>
+            </div>
+            
+        </div>
+    </div>
+    <! ------------------------------------------------------------>
+    <! FORM WITH DEFERENTES SIZES OF COLUMNS  >
+    <! ------------------------------------------------------------>
+    <p class='col-sm-12 sub-title' id='form-full'>Form with many columns</p>
+    <form class="row g-3">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="col-12">
+            <label for="inputAddress2" class="form-label">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+            </select>
+        </div>
+        <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                Check me out
+                </label>
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Sign in</button>
+        </div>
+    </form>
+    <! ------------------------------------------------------------>
+    <! FORM HORIZONTAL USEFULL FOR FILTER>
+    <! ------------------------------------------------------------>
+    <p class='col-sm-12 sub-title' id='filter'>Form horizontal</p>
+    <form class="row justify-content-right align-items-center" id='form-filter'>
+        <div class="col-auto">
+            <label class="form-label" for="data_init">Date From</label>
+            <input type="date" class="form-control">
+        </div>
+        <div class="col-auto">
+            <label class="form-label" for="date_end">To</label>
+            <input type="date" class="form-control">
+       </div>
+       <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Refresh</button>
+        </div>
+    </form>
+    <! ------------------------------------------------------------>
+    <! ALERTS>
+    <! ------------------------------------------------------------>
+    <p class='col-sm-12 sub-title' id='alerts'>Alerts</p>   
+    <div class="col-sm-12 alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+    </div>
+    <div class="col-sm-4 alert alert-secondary" role="alert">
+        A simple secondary alert—check it out!
+    </div>
+    <div class="col-sm-4 alert alert-success" role="alert">
+        A simple success alert—check it out!
+    </div>
+    <div class="col-sm4 alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+    </div>
+    <div class="col-sm-4 alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+    </div>
+    <div class="col-auto alert alert-info" role="alert">
+        A simple info alert—check it out!
+    </div>
+    <div class="col-sm-4 alert alert-light" role="alert">
+        A simple light alert—check it out!
+    </div>
+    <div class="col-sm-12 alert alert-dark" role="alert">
+        A simple dark alert—check it out!
+    </div> 
+
+    <! ------------------------------------------------------------>
+    <! FORM WITH ICONS>
+    <! ------------------------------------------------------------>
+    <p class='col-sm-12 sub-title' id='form-icons'>Form with icons</p>   
+    <form action="">
+        <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input class="input-field" type="text" placeholder="Seu Username" name="usrnm">
+        </div>
+    
+        <div class="input-container">
+            <i class="fa fa-envelope icon"></i>
+            <input class="input-field" type="text" placeholder="Seu Email" name="email">
+        </div>
+    
+        <div class="input-container">
+            <i class="fa fa-key icon"></i>
+            <input class="input-field" type="password" placeholder="Password" name="psw">
+        </div>
+    
+        <button type="submit" class="btn">Register</button>
+    </form>   
+</div>

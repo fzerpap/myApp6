@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Marcas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @marcas.each do |marca| %>
+      <tr>
+        <td><%= marca.name %></td>
+        <td>
+          <%= link_to marca do %>
+            <i class='fa fa-search'></i>
+            Show
+          <% end %>
+        </td>
+        <td>
+          <%= link_to edit_marca_path(marca) do %>
+            <i class='fa fa-edit'></i>
+            Edit
+          <% end %>
+        </td>  
+        <td>
+          <%= link_to marca, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class='fa fa-trash'></i>
+            Destroy
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Marca', new_marca_path %>

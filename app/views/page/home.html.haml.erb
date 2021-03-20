@@ -1,0 +1,168 @@
+
+.container
+    %h4.title Making the review HTML and CSS with Bootstrap
+    %nav.navbar.navbar-dark.bg-primary
+      .container-fluid
+        %a.navbar-nav{:href => "#texts"} TEXT ATTRIB
+        %a.navbar-nav{:href => "#table"} TABLE
+        %a.navbar-nav{:href => "#form-login"} FORM-LOGIN
+        %a.navbar-nav{:href => "#form-full"} FORM-FULL
+        %a.navbar-nav{:href => "#form-floating"} FORM-FLOATING
+        %a.navbar-nav{:href => "#filter"} FILTER
+        %a.navbar-nav{:href => "#alerts"} ALERTS
+        %form.d-flex
+          %input.form-control.me-2{"aria-label" => "Search", :placeholder => "Search", :type => "search"}/
+          %button.btn.btn-outline-success{:type => "submit"} Search
+    .row
+      .col-sm-6
+        <%= image_tag('image1.jpg', class: 'img-fluid mt-2')%>
+      .col-sm-6
+        %p.sub-title Sign in
+        %form
+          %label.form-label{:for => "login"} Username:
+          %input.control-form{:placeholer => "fzerpap@gmail.com", :type => "text"}/
+          %label.form-label{:for => "password"} Password:
+          %input.control-form{:type => "password"}/
+          %button.btn.btn-primary{:type => "submit"} Sign in
+      .row
+        .col-sm-4
+          %p.sub-title Colors Text
+          %p.text-primary Primary Text
+          %p.text-secondary Secondary Text
+          %p.text-success Sucess Text
+          %p.text-info Info Text
+          %p.text-warning Warning Text
+          %p.text-danger Danger Text
+        .col-sm-4
+          %p.sub-title Background Colors Text
+          %p.bg-primary Primary Text
+          %p.bg-secondary Secondary Text
+          %p.bg-success Sucess Text
+          %p.bg-info Info Text
+          %p.bg-warning Warning Text
+          %p.bg-danger Danger Text
+        .col-sm-4
+          %p.sub-title Text Position
+          %p.text-center Text center
+          %p.text-right Textright
+          %p.text-left
+            Text left
+      .row
+        .col-sm-12
+          %p#table.sub-title Table
+          %table.table
+            %thead
+              %tr
+                %th.text-center Column1
+                %th.text-center Column2
+                %th.text-center Column3
+                %th.text-center Actions
+            %tr.table-info
+              %td Value 1
+              %td Value 2
+              %td Value 2
+              %td
+                %a{:href => "#"}
+                  %i.fa.fa-user
+                  Icono
+            %tr.table-success
+              %td Value 1
+              %td Value 2
+              %td Value 2
+            %tr.table-warning
+              %td Value 1
+              %td Value 2
+              %td Value 2
+            %tr.table-danger.text-decoration-line-through
+              %td Value 1
+              %td Value 2
+              %td Value 2
+      .row
+        .col-sm-6
+          %p.sub-title Figure with text
+          %figure.figure
+            = image_tag('image1', class: 'figure-img img-fluid rounded', alt: '...')
+            %figcaption.figure-caption A caption for the above image.
+      .row
+        .col-sm-6
+          %p.sub-title Form with all type inputs
+          %form
+            %label.form-label{:for => "name"} Full Name:
+            %input.control-form{:type => "text"}/
+            %label.form-label{:for => "data"} Birthday:
+            %input.control-form{:type => "date"}/
+            %label.form-label{:for => "children"} Childrens:
+            %input.control-form{:type => "text"}/
+            .form-check
+              %input.form-check-input{:checked => "checked", :type => "checkbox"}/
+              %label.form-check-label{:for => "flexCheckChecked"} Casado
+            %label.form-label{:for => "formFile"} File input
+            %input#formFile.form-control{:type => "file"}/
+            %button.bnt.bnt-primary{:type => "submit"} Salvar
+        .col-sm-6
+          %p#form-floating.sub-title Form Floating label
+          .form-floating
+            %input#floatingInput.form-control{:placeholder => "Francisco Zerpa", :type => "text"}/
+            %label{:for => "floatingInput"} Full Name
+          .form-floating
+            %input.form-control{:placeholder => "Address", :type => "text"}/
+            %label{:for => "floatingAddress"} Address
+      %p#form-full.col-sm-12.sub-title Form with many columns
+      %form.row.g-3
+        .col-md-6
+          %label.form-label{:for => "inputEmail4"} Email
+          %input#inputEmail4.form-control{:type => "email"}/
+        .col-md-6
+          %label.form-label{:for => "inputPassword4"} Password
+          %input#inputPassword4.form-control{:type => "password"}/
+        .col-12
+          %label.form-label{:for => "inputAddress"} Address
+          %input#inputAddress.form-control{:placeholder => "1234 Main St", :type => "text"}/
+        .col-12
+          %label.form-label{:for => "inputAddress2"} Address 2
+          %input#inputAddress2.form-control{:placeholder => "Apartment, studio, or floor", :type => "text"}/
+        .col-md-6
+          %label.form-label{:for => "inputCity"} City
+          %input#inputCity.form-control{:type => "text"}/
+        .col-md-4
+          %label.form-label{:for => "inputState"} State
+          %select#inputState.form-select
+            %option{:selected => "selected"} Choose...
+            %option ...
+        .col-md-2
+          %label.form-label{:for => "inputZip"} Zip
+          %input#inputZip.form-control{:type => "text"}/
+        .col-12
+          .form-check
+            %input#gridCheck.form-check-input{:type => "checkbox"}/
+            %label.form-check-label{:for => "gridCheck"}
+              Check me out
+        .col-12
+          %button.btn.btn-primary{:type => "submit"} Sign in
+      %p#filter.col-sm-12.sub-title Form horizontal
+      %form#form-filter.row.justify-content-right.align-items-center
+        .col-auto
+          %label.form-label{:for => "data_init"} Date From
+          %input.form-control{:type => "date"}/
+        .col-auto
+          %label.form-label{:for => "date_end"} To
+          %input.form-control{:type => "date"}/
+        .col-auto
+          %button.btn.btn-primary{:type => "submit"} Refresh
+      %p#alerts.col-sm-12.sub-title Alerts
+      .col-sm-12.alert.alert-primary{:role => "alert"}
+        A simple primary alert—check it out!
+      .col-sm-4.alert.alert-secondary{:role => "alert"}
+        A simple secondary alert—check it out!
+      .col-sm-4.alert.alert-success{:role => "alert"}
+        A simple success alert—check it out!
+      .col-sm4.alert.alert-danger{:role => "alert"}
+        A simple danger alert—check it out!
+      .col-sm-4.alert.alert-warning{:role => "alert"}
+        A simple warning alert—check it out!
+      .col-auto.alert.alert-info{:role => "alert"}
+        A simple info alert—check it out!
+      .col-sm-4.alert.alert-light{:role => "alert"}
+        A simple light alert—check it out!
+      .col-sm-12.alert.alert-dark{:role => "alert"}
+        A simple dark alert—check it out!
